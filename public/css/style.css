@@ -1,10 +1,10 @@
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
+} */
 
-nav {
+/* nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -36,4 +36,4 @@ label {
   height: 75px;
   bottom: 0;
   background-color: azure;
-}
+} */
