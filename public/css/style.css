@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  text-transform: uppercase;
+  background-color: azure;
+}
+
+.links {
+  display: flex;
+  justify-content: space-between;
+  width: 350px;
+}
+label,
+input,
+textarea {
+  display: flex;
+  flex-direction: column;
+  padding: 12px 6px;
+}
+label {
+  text-transform: capitalize;
+  position: initial;
+}
+.footer {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  height: 75px;
+  bottom: 0;
+  background-color: azure;
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ejs challange</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <%- include("partials/header.ejs"); -%>
+
+    <main>
+      <h1>Hello User</h1>
+      <p><%= home_text %></p>
+
+      <% postArray.forEach((post)=>{ %>
+      <h1><%= post.title %></h1>
+      <p style="display: inline" hre>
+        <%= post.content.substring(0,100)+ "..."%>
+      </p>
+      <a href="/posts/<%= post._id %>">read more</a>
+      <%});%>
+    </main>
+
+    <%- include("partials/footer.ejs"); -%>
+  </body>
+</html>
