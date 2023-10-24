@@ -50,10 +50,11 @@ app.post("/publish", function (request_publish_post, response_publish_post) {
   response_publish_post.redirect("/");
 });
 
-app.get("/posts/:post_id", async function (req, res) {
-  const postId = lodash.lowerCase(req.params.post_id);
-  const data = await blogModel.findById(postId).exec();
-  console.log(data);
+app.get("/posts/:post_id", function (req, res) {
+  const postId = req.params.post_id;
+  blogModel.findById(postId).then(function (data) {
+    res.render("posts", { postTitle: data.title, postContent: data.content });
+  });
 });
 
 app.listen(3000, function () {
